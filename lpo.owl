@@ -1,131 +1,1 @@
-Prefix: : <http://erlangen-crm.org/current/>
-Prefix: lpo: <https://w3id.org/rg-mpg-de/lpo#>
-Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
-
-Ontology: <https://w3id.org/rg-mpg-de/lpo>
-
-Class: E30_Right
-Class: E31_Document
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-Class: E39_Actor
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-Class: E40_Legal_Body
-Class: E41_Appellation
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-Class: E42_Identifier
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-Class: E52_Time-Span
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-Class: E55_Type
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-Class: E7_Activity
-Class: lpo:DomainChange (is a E5_Event)
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-Class: lpo:Jurisdictional_Domain
-Class: lpo:Jurisdictional_Domain (is a E28_Conceptual_Object)
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-Class: lpo:Legal_Act
-Class: lpo:Legal_Act (is a E65_Creation)
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-Class: lpo:Legal_Provision (is a E89_Propositional_Object)
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-Class: lpo:Litigation
-Class: lpo:Litigation (is a E7_Activity)
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-Class: lpo:Matter
-Class: lpo:Matter (is a E28_Conceptual_Object)
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-Class: owl:Thing
-ObjectProperty: (P129_is_about)
-	Domain: lpo:Legal_Provision (is a E89_Propositional_Object)
-	Range: lpo:Matter or lpo:Litigation
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-ObjectProperty: P14_carried_out_by
-	Domain: lpo:Legal_Act (is a E65_Creation)
-	Range: E39_Actor
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-ObjectProperty: P1_is_identified_by
-	Domain: E39_Actor
-	Range: E41_Appellation
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-ObjectProperty: P1_is_identified_by
-	Domain: E52_Time-Span
-	Range: E41_Appellation
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-ObjectProperty: P1_is_identified_by
-	Domain: lpo:Jurisdictional_Domain (is a E28_Conceptual_Object)
-	Range: E41_Appellation
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-ObjectProperty: P1_is_identified_by
-	Domain: E31_Document
-	Range: E41_Appellation
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-ObjectProperty: P2_has_type
-	Domain: lpo:Matter (is a E28_Conceptual_Object)
-	Range: E55_Type
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-ObjectProperty: P2_has_type
-	Domain: E31_Document
-	Range: E55_Type
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-ObjectProperty: P2_has_type
-	Domain: lpo:Legal_Act or E7_Activity
-	Range: E55_Type
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-ObjectProperty: P48_has_preferred_identifier
-	Domain: E31_Document
-	Range: E42_Identifier
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-ObjectProperty: P4_has_time-span
-	Domain: lpo:Legal_Act (is a E65_Creation)
-	Range: E52_Time-Span
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-ObjectProperty: P67_refers_to
-	Domain: lpo:Legal_Provision (is a E89_Propositional_Object)
-	Range: lpo:Legal_Provision (is a E89_Propositional_Object)
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-ObjectProperty: P67_refers_to
-	Domain: lpo:DomainChange (is a E5_Event)
-	Range: lpo:Jurisdictional_Domain (is a E28_Conceptual_Object)
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-ObjectProperty: P70_documents
-	Domain: E31_Document
-	Range: lpo:Legal_Provision (is a E89_Propositional_Object)
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-ObjectProperty: P70_documents
-	Domain: E31_Document
-	Range: lpo:Legal_Act or E7_Activity
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-ObjectProperty: P94_has_created
-	Domain: lpo:Legal_Act or E7_Activity
-	Range: lpo:Legal_Provision (is a E89_Propositional_Object)
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-ObjectProperty: P94_has_created
-	Domain: lpo:Legal_Act or E7_Activity
-	Range: lpo:Jurisdictional_Domain or E55_Type or E30_Right or E40_Legal_Body
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-ObjectProperty: lpo:applies_to
-	Domain: lpo:Legal_Provision (is a E89_Propositional_Object)
-	Range: lpo:Jurisdictional_Domain (is a E28_Conceptual_Object)
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-ObjectProperty: lpo:regulates
-	Domain: lpo:Legal_Provision (is a E89_Propositional_Object)
-	Range: lpo:Matter or lpo:Litigation
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-DataProperty: P3_has_note
-	Domain: E42_Identifier
-	Range: xsd:string
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-DataProperty: P3_has_note
-	Domain: E41_Appellation
-	Range: xsd:string
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-DataProperty: lpo:has_form
-	Domain: lpo:Legal_Provision (is a E89_Propositional_Object)
-	Range: xsd:string
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
-DataProperty: lpo:has_title
-	Domain: E31_Document
-	Range: xsd:string
-	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
+Prefix: : <>Prefix: : <>Prefix: lpo: <>Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>Ontology: https://w3id.org/rg-mpg-de/lpoClass: E28_Conceptual_Object	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoClass: E30_RightClass: E31_Document	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoClass: E39_Actor	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoClass: E40_Legal_BodyClass: E41_Appellation	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoClass: E42_Identifier	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoClass: E52_Time-Span	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoClass: E55_Type	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoClass: E5_Event	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoClass: E65_Creation	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoClass: E7_Activity	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoClass: E89_Propositional_Object	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoClass: lpo:DomainChange	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoClass: lpo:Jurisdictional_Domain	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoClass: lpo:Legal_Act	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoClass: lpo:Legal_Provision	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoClass: lpo:Litigation	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoClass: lpo:Matter	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoClass: owl:ThingObjectProperty: (P129_is_about)	Domain: lpo:Legal_Provision	Range: lpo:Matter or lpo:Litigation	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoObjectProperty: P14_carried_out_by	Domain: lpo:Legal_Act	Range: E39_Actor	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoObjectProperty: P1_is_identified_by	Domain: E39_Actor	Range: E41_Appellation	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoObjectProperty: P1_is_identified_by	Domain: E52_Time-Span	Range: E41_Appellation	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoObjectProperty: P1_is_identified_by	Domain: lpo:Jurisdictional_Domain	Range: E41_Appellation	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoObjectProperty: P1_is_identified_by	Domain: E31_Document	Range: E41_Appellation	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoObjectProperty: P2_has_type	Domain: lpo:Matter	Range: E55_Type	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoObjectProperty: P2_has_type	Domain: E31_Document	Range: E55_Type	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoObjectProperty: P2_has_type	Domain: lpo:Legal_Act or E7_Activity	Range: E55_Type	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoObjectProperty: P48_has_preferred_identifier	Domain: E31_Document	Range: E42_Identifier	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoObjectProperty: P4_has_time-span	Domain: lpo:Legal_Act	Range: E52_Time-Span	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoObjectProperty: P67_refers_to	Domain: lpo:Legal_Provision	Range: lpo:Legal_Provision	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoObjectProperty: P67_refers_to	Domain: lpo:DomainChange	Range: lpo:Jurisdictional_Domain	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoObjectProperty: P70_documents	Domain: E31_Document	Range: lpo:Legal_Provision	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoObjectProperty: P70_documents	Domain: E31_Document	Range: lpo:Legal_Act or E7_Activity	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoObjectProperty: P94_has_created	Domain: lpo:Legal_Act or E7_Activity	Range: lpo:Legal_Provision	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoObjectProperty: P94_has_created	Domain: lpo:Legal_Act or E7_Activity	Range: lpo:Jurisdictional_Domain or E55_Type or E30_Right or E40_Legal_Body	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoObjectProperty: lpo:applies_to	Domain: lpo:Legal_Provision	Range: lpo:Jurisdictional_Domain	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoObjectProperty: lpo:regulates	Domain: lpo:Legal_Provision	Range: lpo:Matter or lpo:Litigation	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoObjectProperty: rdfs:subClassOf	Domain: lpo:Legal_Act	Range: E65_Creation	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoObjectProperty: rdfs:subClassOf	Domain: lpo:Jurisdictional_Domain	Range: E28_Conceptual_Object	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoObjectProperty: rdfs:subClassOf	Domain: lpo:Matter	Range: E28_Conceptual_Object	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoObjectProperty: rdfs:subClassOf	Domain: lpo:Litigation	Range: E7_Activity	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoObjectProperty: rdfs:subClassOf	Domain: lpo:Legal_Provision	Range: E89_Propositional_Object	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoObjectProperty: rdfs:subClassOf	Domain: lpo:DomainChange	Range: E5_Event	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoDataProperty: P3_has_note	Domain: E42_Identifier	Range: xsd:string	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoDataProperty: P3_has_note	Domain: E41_Appellation	Range: xsd:string	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoDataProperty: lpo:has_form	Domain: lpo:Legal_Provision	Range: xsd:string	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpoDataProperty: lpo:has_title	Domain: E31_Document	Range: xsd:string	Annotations: rdfs:isDefinedBy https://w3id.org/rg-mpg-de/lpo
