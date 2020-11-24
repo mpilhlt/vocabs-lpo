@@ -1,9 +1,10 @@
-Prefix: : <>
-Prefix: : <>
-Prefix: lpo: <>
+Prefix: : <http://erlangen-crm.org/current/>
+Prefix: lpo: <https://w3id.org/rg-mpg-de/lpo#>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
-Ontology: <http://www.essepuntato.it/example>
+
+Ontology: <https://w3id.org/rg-mpg-de/lpo>
+
 Class: E30_Right
 Class: E31_Document
 	Annotations: rdfs:isDefinedBy <http://www.essepuntato.it/example>
