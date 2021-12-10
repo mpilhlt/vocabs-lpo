@@ -15,6 +15,9 @@
       "lila"
     ]
   },
+  "scopeNote": {
+    "en": "TODO: Create a scope note here."
+  },
   "inScheme": {
     "id": "https://w3id.org/colors/",
     "title": {
