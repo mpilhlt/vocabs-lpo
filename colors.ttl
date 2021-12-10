@@ -5,6 +5,7 @@
 
 color: a skos:ConceptScheme ;
     dct:title "Color vocabulary with hierarchy"@en, "Farbvokabular mit Hierarchie"@de ;
+    skos:prefLabel "Color vocabulary with hierarchy"@en, "Farbvokabular mit Hierarchie"@de ;
     dct:creator "Hans Dampf"@de ;
     dct:created "2021-11-02"^^xsd:date ;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
@@ -13,6 +14,7 @@ color: a skos:ConceptScheme ;
 color:b0001 a skos:Concept ;
     skos:prefLabel "Violett"@de, "violet"@en ;
     skos:altLabel "lila"@de, "purple"@en ;
+    skos:scopeNote "TODO: Create a scope note here."@en ;
     skos:topConceptOf color: .
 
 color:b0002 a skos:Concept ;
